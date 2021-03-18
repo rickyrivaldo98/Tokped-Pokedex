@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Nunito";
+}
+
+body {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+ul {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+
+.preload {
+  height: 100%;
+  width: 414px;
+  position: absolute;
+  background: rgba(41, 41, 41, 0.452);
+  display: flex;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  transition: opacity 0.5s ease-in-out;
+}
+.pokeload {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: spin1 2s linear infinite;
+}
+
+.pokeloaddetail {
+  width: 30%;
+  animation: spin2 2s linear infinite;
+}
+@keyframes spin1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
